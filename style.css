@@ -1,0 +1,14 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    --cor-bg: linear-gradient(140deg, rgba(0,24,72,1) 0%, rgba(48,24,96,1) 75%, rgba(72,48,120,1) 100%);
+}
+
+.main {
+    background: var(--cor-bg);
+    height: 100vh;
+}
