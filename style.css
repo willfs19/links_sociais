@@ -5,10 +5,117 @@
 }
 
 html {
-    --cor-bg: linear-gradient(140deg, rgba(0,24,72,1) 0%, rgba(48,24,96,1) 75%, rgba(72,48,120,1) 100%);
+    --cor-bg: linear-gradient(140deg, rgba(65,128,171,1) 0%, rgba(138,179,207,1) 65%, rgba(228,235,240,1) 100%);
+    --cor-border: #bdd1de;
+    --cor-txt: #001848;
+    --box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.4);
+    --small-color: #000;
+}
+
+.darkMode {
+    --cor-bg: linear-gradient(140deg, rgba(0,24,72,1) 0%, rgba(48,24,96,1) 65%, rgba(72,48,120,1) 100%);
+    --cor-border: #483078;
+    --cor-txt: #e4ebf0;
+    --box-shadow: 5px 5px 5px rgba(255, 255, 255, 0.4);
+    --small-color: #fff;
 }
 
 .main {
     background: var(--cor-bg);
-    height: 100vh;
+    height: 100%;
+    padding-bottom: 50px;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+}
+
+.usuario {
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.usuario img {
+    width: 200px;
+    border-radius: 50%;
+    border: 5px solid var(--cor-border);
+}
+
+.usuario h2 {
+    color: var(--cor-txt);
+    margin-top: 20px;
+    font-size: 1.5em;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+}
+
+.btn-mode {
+    width: 100px;
+    margin-top: 20px;
+}
+
+.social {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 400px;
+    margin-top: 15px;
+    border: 3px solid var(--cor-border);
+    padding: 10px 40px;
+    border-radius: 40px;
+    box-shadow: var(--box-shadow);
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.social img {
+    width: 60px;
+    transition: all 0.5s;
+}
+
+.social h3 {
+    color: var(--cor-txt);
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    transition: all 0.5s;
+}
+
+.social:hover img {
+    transform: scale(1.1);
+    transition: all 0.3s;
+    animation-name: logoAnima;
+    animation-duration: 0.5s;
+    animation-timing-function: ease-in-out;
+}
+
+.social:hover h3 {
+    transform: scale(1.1);
+    transition: all 0.5s;
+}
+
+@keyframes logoAnima {
+    0%   {transform: rotate(0deg);}
+    25%  {transform: rotate(-10deg) scale(1.1);}
+    75%  {transform: rotate(10deg) scale(1.1);}
+    100% {transform: rotate(0deg) scale(1.1);}
+}
+
+small {
+    color: var(--small-color);
+    margin-top: 100px;
+    text-align: center;
+    font-size: 16px;
+}
+
+/* Mobile */
+@media (max-width: 575.98px) {
+    .social {
+        width: 300px;
+        padding: 0px 40px;
+    }
 }
