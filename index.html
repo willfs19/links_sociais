@@ -16,10 +16,18 @@
         <div class="container">
             <div class="usuario">
                 <div class="container">
-                    <img src="img/avatar.png" alt="">
+                    <img class="avatar" src="img/avatar.png" alt="">
                 </div>
                 <div class="container">
-                    <button class="btn-mode">Mode</button>
+                    
+                    <label class="check" for="mode-color">
+                        <img class="icon light-icon" src="img/light-icon.png" alt="">
+                        <span class="check-center">
+                            <input id="mode-color" type="checkbox">
+                        </span>
+                        <img class="icon dark-icon" src="img/dark-icon.png" alt="">
+                    </label>
+                    
                 </div>
                 <h2>John Wick Aposentado</h2>
             </div>
@@ -27,38 +35,75 @@
 
         <div class="container">
             <div class="container-social">
-                <div class="social">
-                    <img src="img/facebook_logo.png" alt="Facebook">
-                    <h3>Facebook</h3>
-                </div>
-                <div class="social">
-                    <img src="img/instagram_logo.png" alt="Instagram">
-                    <h3>Instagram</h3>
-                </div>
-                <div class="social">
-                    <img src="img/whatsapp_logo.png" alt="Whatsapp">
-                    <h3>Whatsapp</h3>
-                </div>
-                <div class="social">
-                    <img src="img/twitter_logo.png" alt="Twetter">
-                    <h3>Twitter</h3>
-                </div>
-                <div class="social">
-                    <img src="img/youtube_logo.png" alt="Youtube">
-                    <h3>Youtube</h3>
-                </div>
-                <div class="social">
-                    <img src="img/linkedin_logo.png" alt="Linkedin">
-                    <h3>Linkedin</h3>
-                </div>
-                <div class="social">
-                    <img src="img/github_logo.png" alt="Github">
-                    <h3>Github</h3>
-                </div>
-                <div class="social">
-                    <img src="img/tiktok_logo.png" alt="Tiktok">
-                    <h3>Tiktok</h3>
-                </div>
+                <a href="https://facebook.com" target="_blank">
+                    <div class="social">
+                        <img src="img/facebook_logo.png" alt="Facebook">
+                        <h3>Facebook</h3>
+                    </div>
+                </a>
+
+                <div class="social-space"></div>
+
+                <a href="https://instagram.com" target="_blank">
+                    <div class="social">
+                        <img src="img/instagram_logo.png" alt="Instagram">
+                        <h3>Instagram</h3>
+                    </div>
+                </a>
+
+                <div class="social-space"></div>
+
+                <a href="https://web.whatsapp.com" target="_blank">
+                    <div class="social">
+                        <img src="img/whatsapp_logo.png" alt="Whatsapp">
+                        <h3>Whatsapp</h3>
+                    </div>
+                </a>
+
+                <div class="social-space"></div>
+
+                <a href="https://twitter.com" target="_blank">
+                    <div class="social">
+                        <img src="img/twitter_logo.png" alt="Twetter">
+                        <h3>Twitter</h3>
+                    </div>
+                </a>
+
+                <div class="social-space"></div>
+
+                <a href="https://youtube.com" target="_blank">
+                    <div class="social">
+                        <img src="img/youtube_logo.png" alt="Youtube">
+                        <h3>Youtube</h3>
+                    </div>
+                </a>
+
+                <div class="social-space"></div>
+
+                <a href="https://linkedin.com" target="_blank">
+                    <div class="social">
+                        <img src="img/linkedin_logo.png" alt="Linkedin">
+                        <h3>Linkedin</h3>
+                    </div>
+                </a>
+
+                <div class="social-space"></div>
+
+                <a href="https://github.com" target="_blank">
+                    <div class="social">
+                        <img src="img/github_logo.png" alt="Github">
+                        <h3>Github</h3>
+                    </div>
+                </a>
+
+                <div class="social-space"></div>
+
+                <a href="https://tiktok.com" target="_blank">
+                    <div class="social">
+                        <img src="img/tiktok_logo.png" alt="Tiktok">
+                        <h3>Tiktok</h3>
+                    </div>
+                </a>
             </div>
         </div>
 
@@ -66,10 +111,34 @@
             <small>
                 Desenvolvido por William Ferreira © 2023
             </small>
-        </div>
-        
-        
+        </div> 
 
     </div>
+
+    <script>
+
+        let modeColor = document.querySelector("#mode-color");
+        let checkCenter = document.querySelector(".check-center");
+        let lightIcon = document.querySelector(".light-icon");
+        let darkIcon = document.querySelector(".dark-icon");
+
+        console.log(lightIcon);
+        console.log(darkIcon);
+
+        modeColor.addEventListener("change", (event) => {
+            if(event.currentTarget.checked) {
+                checkCenter.classList.add("_in");
+                document.documentElement.classList.add("darkMode");
+                lightIcon.classList.remove("_in");
+                darkIcon.classList.add("_in");
+            } else {
+                checkCenter.classList.remove("_in");
+                document.documentElement.classList.remove("darkMode");
+                lightIcon.classList.add("_in");
+                darkIcon.classList.remove("_in");
+            }
+        })
+
+    </script>
 </body>
 </html>
